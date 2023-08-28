@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragProductEntry">
+
+    <fragment
+        android:id="@+id/fragProductEntry"
+        android:name="com.example.mvvm_room_app.ui.components.fragments.FragProductEntry"
+        android:label="frag_product_entry"
+        tools:layout="@layout/frag_product_entry" >
+        <action
+            android:id="@+id/action_fragProductEntry_to_fragProductDetails"
+            app:destination="@id/fragProductDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragProductDetails"
+        android:name="com.example.mvvm_room_app.ui.components.fragments.FragProductDetails"
+        android:label="frag_product_details"
+        tools:layout="@layout/frag_product_details" >
+        <action
+            android:id="@+id/action_fragProductDetails_to_fragProductEntry"
+            app:destination="@id/fragProductEntry" />
+    </fragment>
+</navigation>
